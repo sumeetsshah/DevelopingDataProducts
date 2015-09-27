@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Shiny BMI Calculator</title>
+  <meta name="description" content="">
+  <meta name="author" content="Sumeet Shah">
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/reveal.min.css">
+  <link rel="stylesheet" href="libraries/frameworks/revealjs/css/theme/default.css" id="theme">
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/moon.css" id="theme">
+  <!--[if lt IE 9]>
+  <script src="lib/js/html5shiv.js"></script>
+  <![endif]-->  <link rel="stylesheet" href = "assets/css/ribbons.css">
+
+</head>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section class='class' data-state='' id='id'>
+  <h2>Shiny BMI Calculator</h2>
+  <h3>Developing Data Products Course Project</h3>
+
+<h4>Sumeet Shah</h4>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>The Problem: Obesity</h2>
+  <p>In recent years, the world has come to face increasing levels of obesity. This increase in unhealthy levels of weight is prevalent in wealthy nations like the United States of America and Australia, and is spreading to developing nations like India and China as well. Obesity affects men, women, and children, as it is often the result of lifestyle choices and personal habits (although there are cases where genetics and/or medical issues are the cause).</p>
+
+<p><img src="ObesityMap.png" alt="width"></p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Body Mass Index as a General Measure</h2>
+  <p>An individual&#39;s Body Mass Index(BMI) is a value derived from an individual&#39;s height and weight.  The calculation is the body mass divided by the square of the height (kg/m<sup>2).</sup></p>
+
+<p>The purpose of BMI is to categorize an individual as underweight(<18.5), healthy(18.5 to 24.9), overweight(25 to 30), or obese(>30) based on the value. While not a perfect measure of an individual&#39;s health/condition in relation to weight, it does provide individuals with guidelines as to how they should approach their weight. For example, an individual weighing 80 kg who is 180 cm tall will have a BMI of:</p>
+
+<pre><code class="r">80/(180/100)^2
+</code></pre>
+
+<pre><code>## [1] 24.69136
+</code></pre>
+
+<p>This individual falls into the upper end of the &quot;Healthy&quot; weight category. They should make efforts to either maintain or lose weight, but avoid gaining any if possible.</p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Shiny BMI Calculator</h2>
+  <p>The Shiny BMI Calculator is an easy to use tool where an individual can find not only their current BMI by inputting their current height and weight, but also see how gaining/losing weight and height would affect their BMI.</p>
+
+<p>For adults, their height is relatively fixed, so it is easy for them to pick a target weight and work towards it. The application suggests an &quot;Ideal Weight&quot; which would give the individual a BMI of 21.75, which is right in the middle of the &quot;Healthy&quot; weight range.  For children, their height and weight are constantly changing, but their BMI can be used to check if they are over/underweight so that their parents can help push their eating/exercise habits in the right direction.</p>
+
+</section>
+<section class='class' data-state='' id='id'>
+  <h2>Conclusion</h2>
+  <p>This application is very simple and easy to use.  The idea behind it is that individuals can check their current BMI and see how changes in their weight and height would impact their BMI, as well as what weight they should aim to be in order to obtain a BMI in the middle of the &quot;Healthy&quot; range. Try it out for yourself at <a href="https://sumeetsshah.shinyapps.io/ShinyBMI">https://sumeetsshah.shinyapps.io/ShinyBMI</a> !</p>
+
+<p>Have fun and stay healthy!</p>
+
+</section>
+    </div>
+  </div>
+</body>
+  <script src="libraries/frameworks/revealjs/lib/js/head.min.js"></script>
+  <script src="libraries/frameworks/revealjs/js/reveal.min.js"></script>
+  <script>
+  // Full list of configuration options available here:
+  // https://github.com/hakimel/reveal.js#configuration
+  Reveal.initialize({
+    controls: true,
+    progress: true,
+    history: true,
+    center: true,
+    theme: Reveal.getQueryHash().theme || 'default', 
+    transition: Reveal.getQueryHash().transition || 'default', 
+    dependencies: [
+    // Cross-browser shim that fully implements classList -
+    // https://github.com/eligrey/classList.js/
+      { src: 'libraries/frameworks/revealjs/lib/js/classList.js', condition: function() { return !document.body.classList;}},
+      // Zoom in and out with Alt+click
+      { src: 'libraries/frameworks/revealjs/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Speaker notes
+      { src: 'libraries/frameworks/revealjs/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+      // Remote control your reveal.js presentation using a touch device
+      //{ src: 'libraries/frameworks/revealjs/plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+      ]
+  });
+  </script>  <!-- LOAD HIGHLIGHTER JS FILES -->
+<script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+<script>hljs.initHighlightingOnLoad();</script>
+<!-- DONE LOADING HIGHLIGHTER JS FILES -->
+ 
+
+</html>
